@@ -1,13 +1,26 @@
 {
+  "manifest_version": 3,
   "name": "PhishCatcher",
   "description": "Base Level Extension",
   "version": "1.0",
-  "manifest_version": 3,
   "action": {
     "default_popup": "hello.html",
     "default_icon": "fish.png"
   },
   "icons": {
     "128": "fish.png"
+  },
+  "permissions": [
+    "identity",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "oauth2": {
+    "client_id": "284386632337-ij6r4jt1epr5cj16dcdflc62jg21aa5k.apps.googleusercontent.com",
+    "scopes": [
+      "https://googleapis.com"
+    ]
   }
 }
